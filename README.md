@@ -21,6 +21,7 @@ To start the development server run `nx serve web`. Open your browser and naviga
 - Click on advanced settings and add a new environment variable with key `_CUSTOM_IMAGE` with value `amplify:al2023`
 - Once your app has been created, got to `Build settings` located in the `Hosting secion`
 - Click edit, and replace it with the content `./buildspec.yaml` located in the root directory of the project
+- Save and re-run the deployment N.B the initial deployment is expected to fail
 
 
 
