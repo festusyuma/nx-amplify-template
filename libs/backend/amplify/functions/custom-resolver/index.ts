@@ -1,10 +1,9 @@
 import {
   AmplifyGraphQlResolverEvent,
-  AmplifyGraphQlResolverHandler,
+  AmplifyGraphQlResolverHandler
 } from 'aws-lambda/';
 
-import { createInstitutionGroups } from './resolvers/create-institution-groups';
-import { createUser } from './resolvers/create-user';
+import { customMutation } from './resolvers/custom-mutation';
 
 const handlers: Record<
   string,
@@ -12,9 +11,8 @@ const handlers: Record<
   Record<string, (args: AmplifyGraphQlResolverEvent<any>) => Promise<unknown>>
 > = {
   Mutation: {
-    createUser,
-    createInstitutionGroups,
-  },
+    customMutation
+  }
 };
 
 export const handler: AmplifyGraphQlResolverHandler = (event) => {
