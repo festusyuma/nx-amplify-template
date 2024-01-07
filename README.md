@@ -11,7 +11,7 @@ the following commands provide an easy way to trigger amplify commands without h
 
 ## Start the app
 
-To start the development server run `nx serve web`. Open your browser and navigate to http://localhost:4200/. Happy coding!
+To start the development server run `nx serve web`. Open your browser and navigate to http://127.0.0.1:{port}/. Happy coding!
 
 ## Deploy the app on AWS
 - Create amplify gen 2 app.
