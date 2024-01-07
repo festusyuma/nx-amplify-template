@@ -10,17 +10,17 @@ const nextConfig = {
   nx: {
     // Set this to true if you would like to use SVGR
     // See: https://github.com/gregberge/svgr
-    svgr: false
+    svgr: false,
   },
   images: {
-    minimumCacheTTL: 31536000
+    minimumCacheTTL: 31536000,
   },
-  trailingSlash: true
+  trailingSlash: true,
 };
 
 const plugins = [
   // Add more Next.js plugins to this list if needed.
-  withNx
+  withNx,
 ];
 
 module.exports = composePlugins(...plugins)(nextConfig);
