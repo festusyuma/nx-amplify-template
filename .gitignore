@@ -42,3 +42,15 @@ Thumbs.db
 
 # Next.js
 .next
+
+# amplify
+**/.amplify
+**/amplifyconfiguration*
+**/.functions
+
+**/.env
+
+# CDK asset staging directory
+**/.cdk.staging
+**/cdk.out
+**/.apps

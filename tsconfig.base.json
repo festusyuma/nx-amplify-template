@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@template/backend/data": ["libs/backend/amplify/data/resource.ts"],
+      "@template/backend/types": ["libs/backend/types/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

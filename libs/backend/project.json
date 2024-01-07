@@ -1,0 +1,43 @@
+{
+  "name": "backend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "dev": {
+      "command": "amplify sandbox",
+      "options": {
+        "cwd": "libs/backend"
+      }
+    },
+    "deploy": {
+      "command": "amplify pipeline-deploy",
+      "options": {
+        "cwd": "libs/backend"
+      },
+      "cache": true,
+      "inputs": ["{projectRoot}/amplify/**/*"],
+      "outputs": ["{projectRoot}/amplifyconfiguration.json"]
+    },
+    "pull": {
+      "command": "npx amplify generate config",
+      "options": {
+        "cwd": "libs/backend"
+      },
+      "cache": true,
+      "inputs": ["{projectRoot}/amplify/**/*"],
+      "outputs": ["{projectRoot}/amplifyconfiguration.json"]
+    },
+    "types": {
+      "command": "amplify generate graphql-client-code --format graphql-codegen --statement-target typescript --out ./graphql",
+      "options": {
+        "cwd": "libs/backend"
+      }
+    }
+  },
+  "tags": []
+}

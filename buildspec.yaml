@@ -1,0 +1,23 @@
+version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - 'nvm use 20'
+        - 'npm ci'
+        - 'npx nx deploy backend --branch $AWS_BRANCH --app-id $AWS_APP_ID'
+frontend:
+  phases:
+    build:
+      commands:
+        - 'npx nx build web'
+  artifacts:
+    baseDirectory: dist/apps/web/.next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - '.nx/cache/**/*'
+      - 'libs/backend/.amplify/**/.cache/**/*'
+      - '**/cdk.out/.cache/**/*'
+      - 'dist/**/.next/cache/**/*'
