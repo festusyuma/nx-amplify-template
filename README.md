@@ -1,4 +1,4 @@
-# Template
+# Nx Amplify Gen 2 Template
 
 ## Backend commands
 the following commands provide an easy way to trigger amplify commands without having to navigate to the library directory, you can check <a href='https://docs.amplify.aws/gen2/reference/cli-commands/#amplify-sandbox'>here</a> for additional information and arguments for given commands
@@ -14,6 +14,13 @@ the following commands provide an easy way to trigger amplify commands without h
 To start the development server run `nx serve web`. Open your browser and navigate to http://localhost:4200/. Happy coding!
 
 ## Deploy the app on AWS
+- Create amplify gen 2 app.
+- Do not check `my app is a monorepo` checkbox.
+- Change the frontend build command to `nx build web`.
+- Change the Build output directory to `dist/apps/web/.next`.
+- Click on advanced settings and add a new environment variable with key `_CUSTOM_IMAGE` with value `amplify:al2023`
+- Once your app has been created, got to `Build settings` located in the `Hosting secion`
+- Click edit, and replace it with the content `./buildspec.yaml` located in the root directory of the project
 
 
 
