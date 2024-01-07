@@ -8,13 +8,16 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "noUncheckedIndexedAccess": true,
     "target": "es2015",
     "module": "esnext",
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strict": true,
     "baseUrl": ".",
     "paths": {
+      "@template/backend/config": ["libs/backend/amplifyconfiguration.json"],
       "@template/backend/data": ["libs/backend/amplify/data/resource.ts"],
       "@template/backend/types": ["libs/backend/types/index.ts"]
     }
